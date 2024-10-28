@@ -1,0 +1,320 @@
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+}
+.container{
+    width: 100%;
+    box-shadow: 0px 0.1px 0.3px 0.3px black;
+    position: fixed;
+    top: 0;
+    background-color: rgb(241, 227, 241);
+    z-index: 1;
+}
+
+.header{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    position:relative;
+}
+.left-side{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.brand-name a{
+    text-decoration: none;
+}
+.brand-name h1{
+    font-size: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+}
+.menu{
+    margin-left: 25px;
+    margin-top: 5px;
+}
+.menu ul  {
+    display: flex;
+    list-style-type: none;
+    gap: 40px;
+    text-transform: uppercase;
+}
+.menu a{
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+}
+.menu a:hover{
+    color: rgb(220, 23, 158);
+}
+
+.right-side{
+    align-items: center;
+    display: flex;
+    gap: 20px;
+}
+.right-side ul li {
+    display:inline;
+    list-style-type: none;
+    /* text-decoration:underline; */
+    margin-left: 50px;
+    text-align: center;
+    
+}
+/* -----------2----------------- */
+.pupular-product{
+    width: 70%;
+    margin: 0 15%;
+    margin-top:150px;
+    display: flex;
+    justify-content: space-between;
+}
+.pupular{
+    color: black;
+    width: 31%;
+    height: 290px;
+    position: relative;
+    border: 1px solid rgb(0, 0, 0,0.2);
+    cursor: pointer;
+}
+.pupular img{
+    width: 100%; 
+    height: 100%;
+}
+.pupular:hover{
+    color:aliceblue;
+}
+.backround{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color:blue;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+.pupular:hover .backround{
+    opacity: 0.5;
+}
+.brand-year{
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    transition: all 0.4s ease;
+}
+.brand-year h1{
+    margin: 0;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+.brand-year p{
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+.order{
+    position: absolute;
+    bottom: -2px;
+    left: 40px;
+    font-size: 7px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    transition: all 0.4s ease;
+    visibility: hidden;
+    color: aliceblue;
+}
+.pupular:hover .order{
+    bottom: 20px;
+    transition:all 0.55s ease;
+    visibility: visible;
+}
+.order::before{
+    content: "";
+    position:absolute;
+    width: 80px;
+    height: 1px;
+    background-color: rgb(0, 0, 0,0.2);
+    margin: 0;
+    bottom: 5px;
+    left: 0px;
+    display: none;
+    transition:all 0.55s ease;
+}
+.pupular:hover .order::before {
+    transition: all 0.55s ease;
+    display: block;
+    width: 100%;
+}
+.product-overview{
+    width: 70%;
+    margin: 0 15%;
+    margin-top: 100px;
+    display: block;
+    /* margin-left: 50%; */
+}
+
+.description h1{
+    font-size: 35px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+.description-list{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    position: relative;
+}
+
+.description-list ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+    padding: 0;
+    
+}
+.description-list ul li a{
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    /* color: #666666; */
+    text-decoration: none;
+}
+.description-listul li a:hover{
+    color: rgb(129, 23, 23);
+    padding-bottom: 3px;
+    border-bottom:1px solid rgb(0,0,0,0.2) ;
+    transition:all 0.2s ease-in-out;
+}
+
+.product-show{
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+}
+.product-row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.product-colum{
+    width: 23%;
+}
+.img{
+    width: 100%;
+    position: relative;
+}
+.img p{
+    position: absolute;
+    bottom: 0px;
+    left: 85px;
+    width: 40%;
+    border: 1px solid rgb(0,0,0,0.2);
+    font-family: Arial, sans-serif;
+    padding: 8px 5px;
+    text-align: center;
+    background-color: rgba(230, 0, 19);
+    color: aliceblue;
+    visibility: hidden;
+}
+.img:hover p{
+    cursor: pointer;
+    visibility: visible;
+    bottom: 30px;
+    transition:all 0.4s ease;
+    background-color: rgba(54, 67, 202, 0.95);
+    border-radius: 5px;
+}
+.img img{
+    width: 100%;
+    height: 100%;
+}
+.detail{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.name-price{
+    color: #666666;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    margin: 0;
+    margin-top: 8px;
+}
+.name-price p{
+    margin-top: 0;
+    margin-bottom: 13px;
+}
+/* -------------4---------------- */
+.footer_wrapper {
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    /* background-color: blueviolet; */
+    margin: 0 auto; 
+    margin-top: 15%; 
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.footer_wrapper .footer1{
+    float: left;
+    width: 33.33%;
+    height: 300px;
+    background-color:rgb(7, 7, 6);
+    color: rgb(99, 100, 105);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.footer_wrapper .footer2{
+    float: left;
+    width: 33.33%;
+    height: 300px;
+    background-color: rgb(7, 7, 6);
+    color: rgb(99, 100, 105);
+    font-family: Arial, Helvetica, sans-serif;
+} 
+.footer_wrapper .footer3{
+    float: left;
+    width: 33.33%;
+    height: 300px;
+    background-color: rgb(7, 7, 6);
+    color: rgb(99, 100, 105);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.text_footer ul li{
+   
+    list-style-type:none;
+    margin-left: 45px; 
+    padding: 5px;
+    margin-left: 75px;
+    display:flex; 
+    font-family: Arial, Helvetica, sans-serif;
+ }  
+.text_footer h2 {
+    margin-right:55px ;
+    font-family: Arial, Helvetica, sans-serif;
+} 
+nav{
+    background-color:  rgb(7, 7, 6);
+    color: rgb(99, 100, 105);
+    text-align: center;
+    padding: 12px 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+}
+
